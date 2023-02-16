@@ -1,4 +1,4 @@
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 {% set js_version = version.replace('a', '-alpha').replace('b', '-beta') %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/ipyforcegraph/ipyforcegraph-{{ version }}.tar.gz
-  sha256: 8a26691014a8d96176a1a7603b1fe3bb6cf341f1bf69573b0b9dd89318b01225
+  sha256: 7679bf7b167b5321a14d1b5d6987259893dcba5556bebc70d36138b58e5154f2
 
 build:
   number: 0
@@ -18,12 +18,12 @@ requirements:
   host:
     - flit-core >=3.7.1,<4
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
     - ipywidgets >=8.0.4,<9
     - numcodecs
     - pandas
-    - python >=3.7
+    - python >=3.8
     - traittypes
   run_constrained:
     - jupyterlab >=3.0
