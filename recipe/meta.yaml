@@ -1,4 +1,4 @@
-{% set version = "0.3.8" %}
+{% set version = "0.4.0" %}
 {% set js_version = version.replace('a', '-alpha').replace('b', '-beta') %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/ipyforcegraph/ipyforcegraph-{{ version }}.tar.gz
-  sha256: 8a7ac100bd80b11af4c8aca3a65a64e13419ad11f0d298d0fbd8371e351d1652
+  sha256: 39aafd6bb42555c92c60a72dbc8e93884114230d12eaf45017a9f64df83929b7
 
 build:
   number: 0
