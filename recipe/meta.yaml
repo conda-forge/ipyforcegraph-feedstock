@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/i/ipyforcegraph/ipyforcegraph-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/i/ipyforcegraph/ipyforcegraph-{{ version }}.tar.gz
   sha256: 47cc2907370d6810007402f3e480d627403775201bef02e175199e1fa03cbe43
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps
 
@@ -18,12 +18,12 @@ requirements:
   host:
     - flit-core >=3.7.1,<4
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - ipywidgets >=8.0.4,<9
     - numcodecs
     - pandas
-    - python >=3.8
+    - python >={{ python_min }}
     - traittypes
   run_constrained:
     - jupyterlab >=3.0
@@ -41,6 +41,7 @@ test:
     - jupyterlab
     - m2-grep  # [win]
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jupyrdf/ipyforcegraph
